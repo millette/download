@@ -1,0 +1,87 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@waglo/url-to-filename':
+        specifier: ^0.1.1
+        version: 0.1.1
+      filenamify-url:
+        specifier: ^3.1.0
+        version: 3.1.0
+
+packages:
+
+  '@waglo/url-to-filename@0.1.1':
+    resolution: {integrity: sha512-DTGus0Our3BOxWF4R1hJrYPIIog6L2LIY97n0Q1J2cSzQb7Gx0uN6f7j1lw3PkrXoagZ/8RzFL3wB9eBejZDDQ==}
+    engines: {node: '>=22.11.0', npm: '>=10.9.0', pnpm: '>=9.12.3'}
+
+  escape-string-regexp@5.0.0:
+    resolution: {integrity: sha512-/veY75JbMK4j1yjvuUxuVsiS/hr/4iHs9FTT6cgTexxdE0Ly/glccBAkloH/DofkjRbZU3bnoj38mOmhkZ0lHw==}
+    engines: {node: '>=12'}
+
+  filename-reserved-regex@3.0.0:
+    resolution: {integrity: sha512-hn4cQfU6GOT/7cFHXBqeBg2TbrMBgdD0kcjLhvSQYYwm3s4B6cjvBfb7nBALJLAXqmU5xajSa7X2NnUud/VCdw==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+
+  filenamify-url@3.1.0:
+    resolution: {integrity: sha512-Dvv4b4m1l5LiIo05049Q7Nk6v5yp6/E68WF3lm7tzIukATXuAFWIWiCi3N7EZ3jat6uvdNUR1WXqUc+oysFLAw==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+
+  filenamify@5.1.1:
+    resolution: {integrity: sha512-M45CbrJLGACfrPOkrTp3j2EcO9OBkKUYME0eiqOCa7i2poaklU0jhlIaMlr8ijLorT0uLAzrn3qXOp5684CkfA==}
+    engines: {node: '>=12.20'}
+
+  humanize-url@3.0.0:
+    resolution: {integrity: sha512-oWcYrKNVa+bCX9ACFZ85H8l1+QcwBJ64xH5+PHYoLe/Y5aToOfw3s3OZqRA/OyJPcWOXuDLo3qil5CYvTMtp0A==}
+    engines: {node: '>=12.20'}
+
+  normalize-url@7.2.0:
+    resolution: {integrity: sha512-uhXOdZry0L6M2UIo9BTt7FdpBDiAGN/7oItedQwPKh8jh31ZlvC8U9Xl/EJ3aijDHaywXTW3QbZ6LuCocur1YA==}
+    engines: {node: '>=12.20'}
+
+  strip-outer@2.0.0:
+    resolution: {integrity: sha512-A21Xsm1XzUkK0qK1ZrytDUvqsQWict2Cykhvi0fBQntGG5JSprESasEyV1EZ/4CiR5WB5KjzLTrP/bO37B0wPg==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+
+  trim-repeated@2.0.0:
+    resolution: {integrity: sha512-QUHBFTJGdOwmp0tbOG505xAgOp/YliZP/6UgafFXYZ26WT1bvQmSMJUvkeVSASuJJHbqsFbynTvkd5W8RBTipg==}
+    engines: {node: '>=12'}
+
+snapshots:
+
+  '@waglo/url-to-filename@0.1.1':
+    dependencies:
+      filenamify-url: 3.1.0
+
+  escape-string-regexp@5.0.0: {}
+
+  filename-reserved-regex@3.0.0: {}
+
+  filenamify-url@3.1.0:
+    dependencies:
+      filenamify: 5.1.1
+      humanize-url: 3.0.0
+
+  filenamify@5.1.1:
+    dependencies:
+      filename-reserved-regex: 3.0.0
+      strip-outer: 2.0.0
+      trim-repeated: 2.0.0
+
+  humanize-url@3.0.0:
+    dependencies:
+      normalize-url: 7.2.0
+
+  normalize-url@7.2.0: {}
+
+  strip-outer@2.0.0: {}
+
+  trim-repeated@2.0.0:
+    dependencies:
+      escape-string-regexp: 5.0.0
