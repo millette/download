@@ -1,5 +1,5 @@
 {
-  "name": "@waglo/download",
+  "name": "@waglo/download-to-file",
   "exports": "./download.js",
   "version": "0.1.0",
   "type": "module",
