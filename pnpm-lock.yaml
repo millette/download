@@ -9,16 +9,13 @@ importers:
   .:
     dependencies:
       '@waglo/url-to-filename':
-        specifier: ^0.1.1
-        version: 0.1.1
-      filenamify-url:
-        specifier: ^3.1.0
-        version: 3.1.0
+        specifier: ^0.1.2
+        version: 0.1.2
 
 packages:
 
-  '@waglo/url-to-filename@0.1.1':
-    resolution: {integrity: sha512-DTGus0Our3BOxWF4R1hJrYPIIog6L2LIY97n0Q1J2cSzQb7Gx0uN6f7j1lw3PkrXoagZ/8RzFL3wB9eBejZDDQ==}
+  '@waglo/url-to-filename@0.1.2':
+    resolution: {integrity: sha512-/H49GcPC3U8iX/vTPhVKUZMNYW0rhiWiiyHZk3fjvAmXO1Y6lhw5BH+cvcq4UnUru9GKm6Loj4+p17GIv9y87A==}
     engines: {node: '>=22.11.0', npm: '>=10.9.0', pnpm: '>=9.12.3'}
 
   escape-string-regexp@5.0.0:
@@ -36,6 +33,10 @@ packages:
   filenamify@5.1.1:
     resolution: {integrity: sha512-M45CbrJLGACfrPOkrTp3j2EcO9OBkKUYME0eiqOCa7i2poaklU0jhlIaMlr8ijLorT0uLAzrn3qXOp5684CkfA==}
     engines: {node: '>=12.20'}
+
+  filenamify@6.0.0:
+    resolution: {integrity: sha512-vqIlNogKeyD3yzrm0yhRMQg8hOVwYcYRfjEoODd49iCprMn4HL85gK3HcykQE53EPIpX3HcAbGA5ELQv216dAQ==}
+    engines: {node: '>=16'}
 
   humanize-url@3.0.0:
     resolution: {integrity: sha512-oWcYrKNVa+bCX9ACFZ85H8l1+QcwBJ64xH5+PHYoLe/Y5aToOfw3s3OZqRA/OyJPcWOXuDLo3qil5CYvTMtp0A==}
@@ -55,8 +56,9 @@ packages:
 
 snapshots:
 
-  '@waglo/url-to-filename@0.1.1':
+  '@waglo/url-to-filename@0.1.2':
     dependencies:
+      filenamify: 6.0.0
       filenamify-url: 3.1.0
 
   escape-string-regexp@5.0.0: {}
@@ -73,6 +75,10 @@ snapshots:
       filename-reserved-regex: 3.0.0
       strip-outer: 2.0.0
       trim-repeated: 2.0.0
+
+  filenamify@6.0.0:
+    dependencies:
+      filename-reserved-regex: 3.0.0
 
   humanize-url@3.0.0:
     dependencies:

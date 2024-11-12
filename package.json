@@ -10,9 +10,10 @@
   },
   "packageManager": "pnpm@9.12.3",
   "scripts": {
-    "test": "node --test"
+    "test": "node --test",
+    "check": "echo 'Check no-op, continue.'"
   },
   "dependencies": {
-    "@waglo/url-to-filename": "^0.1.1"
+    "@waglo/url-to-filename": "^0.1.2"
   }
 }
