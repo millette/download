@@ -21,6 +21,13 @@ test("destination directory", async (t) => {
   assert.strictEqual(g.length, 1256)
 })
 
+test("no encoding", async (t) => {
+  const g = await download("https://cdn.cogecolive.com/prod-20241107/selection_from_7_nov_live_lr_grec_1730986147616863.mp3", false)
+  assert.strictEqual(g.length, 20832543)
+  const g2 = await download("https://cdn.cogecolive.com/prod-20241107/selection_from_7_nov_live_lr_grec_1730986147616863.mp3", { destination: "hola.mp3" })
+  assert.notEqual(g2.length, 20832543)
+})
+
 test("index.html", async (t) => {
   const g = await download("https://example.com/index.html")
   assert.strictEqual(g.length, 1256)
