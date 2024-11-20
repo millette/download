@@ -13,9 +13,9 @@ import urlToFilename from '@waglo/url-to-filename'
 // if it's false, it's options.encoding is null
 // options.encoding is otherwise "utf8" by default
 export default async function download(url, options) {
-	const noEncoding = options === false
+	const noEncoding = (options === false) || (options?.encoding === false)
 	if (!options) options = {}
-  else if (typeof options === "string") options = { destination: options }
+	else if (typeof options === "string") options = { destination: options }
 
 	if (!options.encoding) options.encoding = "utf8"
 	if (noEncoding) options.encoding = null

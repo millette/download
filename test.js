@@ -26,6 +26,9 @@ test("no encoding", async (t) => {
   assert.strictEqual(g.length, 20832543)
   const g2 = await download("https://cdn.cogecolive.com/prod-20241107/selection_from_7_nov_live_lr_grec_1730986147616863.mp3", { destination: "hola.mp3" })
   assert.notEqual(g2.length, 20832543)
+
+  const g3 = await download("https://cdn.cogecolive.com/prod-20241107/selection_from_7_nov_live_lr_grec_1730986147616863.mp3", { destination: "hola.mp3", encoding: false })
+  assert.strictEqual(g3.length, 20832543)
 })
 
 test("index.html", async (t) => {
