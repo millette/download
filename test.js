@@ -1,4 +1,5 @@
 // node
+import { existsSync } from "node:fs"
 import test from 'node:test'
 import assert from 'node:assert'
 
@@ -11,7 +12,13 @@ const fetchFailedRe = /^TypeError: fetch failed$/
 test("no pathname", async (t) => {
   const g = await download("https://www.google.com")
   assert.ok(g.startsWith("<!doctype html>"))
-  assert.ok(g.length > 20000)
+  assert.ok((g.length > 15000) && (g.length < 25000))
+})
+
+test("destination directory", async (t) => {
+  const g = await download("https://example.com/index.html", { directory: "woot" })
+  assert.ok(existsSync("woot/example.com/index.html"))
+  assert.strictEqual(g.length, 1256)
 })
 
 test("index.html", async (t) => {

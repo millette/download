@@ -11,11 +11,12 @@ import urlToFilename from '@waglo/url-to-filename'
 export default async function download(url, options) {
 	if (!options) options = {}
 	else if (typeof options === "string") options = { destination: options }
-	let { destination, verbose } = options
+	let { destination, verbose, directory } = options
 
 	if (verbose) console.error("Downloading", url)
 	if (typeof url === "string") url = new URL(url)
-	const { dir, filename } = urlToFilename(url)
+	let { dir, filename } = urlToFilename(url)
+  if (directory) dir = join(directory, dir)
 	if (!destination) destination = join(dir, filename)
 	if (!existsSync(dir)) await mkdir(dir, { recursive: true })
 
