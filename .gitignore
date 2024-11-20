@@ -1,1 +1,7 @@
 node_modules/
+
+# cache directories (tests)
+example.com/
+google.com/
+woot/
+
